@@ -1,6 +1,6 @@
 # moimoi
 
-Home of Moimoi - A Tree of Wally Projectgi
+Home of Moimoi - A Tree of Wally Project
 
 ## Getting Started
 
