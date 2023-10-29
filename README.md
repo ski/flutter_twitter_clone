@@ -1,6 +1,6 @@
 # moimoi
 
-A new Flutter project.
+Home of Moimoi - A Tree of Wally Projectgi
 
 ## Getting Started
 
