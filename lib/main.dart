@@ -1,13 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/state/suggestionUserState.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moimoi/state/searchState.dart';
+import 'package:moimoi/state/suggestionUserState.dart';
+import 'package:moimoi/ui/page/common/locator.dart';
+import 'package:moimoi/ui/theme/theme.dart';
 import 'package:provider/provider.dart';
 
-import 'package:flutter_twitter_clone/state/searchState.dart';
-import 'package:flutter_twitter_clone/ui/page/common/locator.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-
+import 'firebase_options.dart';
 import 'helper/routes.dart';
 import 'state/appState.dart';
 import 'state/authState.dart';
@@ -17,7 +17,9 @@ import 'state/notificationState.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   setupDependencies();
   runApp(const MyApp());
 }

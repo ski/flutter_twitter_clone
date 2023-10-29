@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/helper/utility.dart';
-import 'package:flutter_twitter_clone/model/chatModel.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/state/chats/chatState.dart';
-import 'package:flutter_twitter_clone/ui/page/profile/widgets/circular_image.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/url_text/customUrlText.dart';
+import 'package:moimoi/helper/utility.dart';
+import 'package:moimoi/model/chatModel.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/state/chats/chatState.dart';
+import 'package:moimoi/ui/page/profile/widgets/circular_image.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/url_text/customUrlText.dart';
 import 'package:provider/provider.dart';
 
 class ChatScreenPage extends StatefulWidget {

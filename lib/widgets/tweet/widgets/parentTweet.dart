@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/helper/enum.dart';
-import 'package:flutter_twitter_clone/model/feedModel.dart';
-import 'package:flutter_twitter_clone/state/feedState.dart';
-import 'package:flutter_twitter_clone/ui/page/feed/feedPostDetail.dart';
-import 'package:flutter_twitter_clone/widgets/tweet/tweet.dart';
-import 'package:flutter_twitter_clone/widgets/tweet/widgets/unavailableTweet.dart';
+import 'package:moimoi/helper/enum.dart';
+import 'package:moimoi/model/feedModel.dart';
+import 'package:moimoi/state/feedState.dart';
+import 'package:moimoi/ui/page/feed/feedPostDetail.dart';
+import 'package:moimoi/widgets/tweet/tweet.dart';
+import 'package:moimoi/widgets/tweet/widgets/unavailableTweet.dart';
 import 'package:provider/provider.dart';
 
 class ParentTweetWidget extends StatelessWidget {

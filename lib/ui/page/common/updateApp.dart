@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/helper/utility.dart';
-import 'package:flutter_twitter_clone/ui/page/common/splash.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/customFlatButton.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/title_text.dart';
+import 'package:moimoi/helper/utility.dart';
+import 'package:moimoi/ui/page/common/splash.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/customFlatButton.dart';
+import 'package:moimoi/widgets/newWidget/title_text.dart';
 
 class UpdateApp extends StatefulWidget {
   const UpdateApp({Key? key}) : super(key: key);
@@ -48,7 +48,7 @@ class _UpdateAppState extends State<UpdateApp> with WidgetsBindingObserver {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image.asset("assets/images/icon-480.png"),
+            Image.asset("images/icon-480.png"),
             const TitleText(
               "New Update is available",
               fontSize: 25,
@@ -68,7 +68,7 @@ class _UpdateAppState extends State<UpdateApp> with WidgetsBindingObserver {
               child: CustomFlatButton(
                 label: "Update now",
                 onPressed: () => Utility.launchURL(
-                    "https://play.google.com/store/apps/details?id=com.thealphamerc.flutter_twitter_clone"),
+                    "https://play.google.com/store/apps/details?id=com.thealphamerc.moimoi"),
                 borderRadius: 30,
               ),
             )

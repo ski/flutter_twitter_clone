@@ -1,9 +1,9 @@
-import 'package:flutter_twitter_clone/helper/enum.dart';
-import 'package:flutter_twitter_clone/helper/shared_prefrence_helper.dart';
-import 'package:flutter_twitter_clone/helper/utility.dart';
-import 'package:flutter_twitter_clone/model/user.dart';
-import 'package:flutter_twitter_clone/state/appState.dart';
-import 'package:flutter_twitter_clone/ui/page/common/locator.dart';
+import 'package:moimoi/helper/enum.dart';
+import 'package:moimoi/helper/shared_prefrence_helper.dart';
+import 'package:moimoi/helper/utility.dart';
+import 'package:moimoi/model/user.dart';
+import 'package:moimoi/state/appState.dart';
+import 'package:moimoi/ui/page/common/locator.dart';
 
 enum StateType { following, follower }
 

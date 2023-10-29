@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/model/user.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/ui/page/settings/widgets/headerWidget.dart';
-import 'package:flutter_twitter_clone/ui/page/settings/widgets/settingsAppbar.dart';
-import 'package:flutter_twitter_clone/ui/page/settings/widgets/settingsRowWidget.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
+import 'package:moimoi/model/user.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/ui/page/settings/widgets/headerWidget.dart';
+import 'package:moimoi/ui/page/settings/widgets/settingsAppbar.dart';
+import 'package:moimoi/ui/page/settings/widgets/settingsRowWidget.dart';
+import 'package:moimoi/ui/theme/theme.dart';
 import 'package:provider/provider.dart';
 
 class AccountSettingsPage extends StatelessWidget {

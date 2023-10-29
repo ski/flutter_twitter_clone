@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/customCheckBox.dart';
-import 'package:flutter_twitter_clone/widgets/url_text/customUrlText.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/newWidget/customCheckBox.dart';
+import 'package:moimoi/widgets/url_text/customUrlText.dart';
 
 class SettingRowWidget extends StatelessWidget {
   const SettingRowWidget(

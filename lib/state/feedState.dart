@@ -1,19 +1,20 @@
-import 'dart:async';
 import 'dart:io';
-import 'package:firebase_database/firebase_database.dart';
+import 'dart:async';
+
 import 'package:firebase_database/firebase_database.dart' as database;
+import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter_twitter_clone/helper/enum.dart';
-import 'package:flutter_twitter_clone/helper/shared_prefrence_helper.dart';
-import 'package:flutter_twitter_clone/model/feedModel.dart';
-import 'package:flutter_twitter_clone/helper/utility.dart';
-import 'package:flutter_twitter_clone/model/user.dart';
-import 'package:flutter_twitter_clone/state/appState.dart';
-import 'package:flutter_twitter_clone/ui/page/common/locator.dart';
-// import 'package:link_preview_generator/link_preview_generator.dart'
-//     show WebInfo;
+//import 'package:link_preview_generator/link_preview_generator.dart';
 import 'package:path/path.dart' as path;
 import 'package:translator/translator.dart';
+
+import 'package:moimoi/helper/enum.dart';
+import 'package:moimoi/helper/shared_prefrence_helper.dart';
+import 'package:moimoi/helper/utility.dart';
+import 'package:moimoi/model/feedModel.dart';
+import 'package:moimoi/model/user.dart';
+import 'package:moimoi/state/appState.dart';
+import 'package:moimoi/ui/page/common/locator.dart';
 
 class FeedState extends AppState {
   bool isBusy = false;
@@ -75,13 +76,13 @@ class FeedState extends AppState {
     return list;
   }
 
-  Map<String, dynamic> _linkWebInfos = {};
+  final Map<String, dynamic> _linkWebInfos = {};
   Map<String, dynamic> get linkWebInfos => _linkWebInfos;
   void addWebInfo(String url, dynamic webInfo) {
     _linkWebInfos.addAll({url: webInfo});
   }
 
-  Map<String, Translation?> _tweetsTranslations = {};
+  final Map<String, Translation?> _tweetsTranslations = {};
   Map<String, Translation?> get tweetsTranslations => _tweetsTranslations;
   void addTweetTranslation(String tweet, Translation? translation) {
     _tweetsTranslations.addAll({tweet: translation});
@@ -190,12 +191,12 @@ class FeedState extends AppState {
   /// After getting tweet detail fetch tweet comments from firebase
   void getPostDetailFromDatabase(String? postID, {FeedModel? model}) async {
     try {
-      FeedModel? _tweetDetail;
+      FeedModel? tweetDetail;
       if (model != null) {
         // set tweet data from tweet list data.
         // No need to fetch tweet from firebase db if data already present in tweet list
-        _tweetDetail = model;
-        setFeedModel = _tweetDetail;
+        tweetDetail = model;
+        setFeedModel = tweetDetail;
         postID = model.key;
       } else {
         assert(postID != null);
@@ -208,20 +209,20 @@ class FeedState extends AppState {
           final snapshot = event.snapshot;
           if (snapshot.value != null) {
             var map = snapshot.value as Map<dynamic, dynamic>;
-            _tweetDetail = FeedModel.fromJson(map);
-            _tweetDetail!.key = snapshot.key!;
-            setFeedModel = _tweetDetail!;
+            tweetDetail = FeedModel.fromJson(map);
+            tweetDetail!.key = snapshot.key!;
+            setFeedModel = tweetDetail!;
           }
         });
       }
 
-      if (_tweetDetail != null) {
+      if (tweetDetail != null) {
         // Fetch comment tweets
         _commentList = <FeedModel>[];
         // Check if parent tweet has reply tweets or not
-        if (_tweetDetail!.replyTweetKeyList != null &&
-            _tweetDetail!.replyTweetKeyList!.isNotEmpty) {
-          for (String? x in _tweetDetail!.replyTweetKeyList!) {
+        if (tweetDetail!.replyTweetKeyList != null &&
+            tweetDetail!.replyTweetKeyList!.isNotEmpty) {
+          for (String? x in tweetDetail!.replyTweetKeyList!) {
             if (x == null) {
               return;
             }
@@ -242,7 +243,7 @@ class FeedState extends AppState {
                   _commentList.add(commentModel);
                 }
               } else {}
-              if (x == _tweetDetail!.replyTweetKeyList!.last) {
+              if (x == tweetDetail!.replyTweetKeyList!.last) {
                 /// Sort comment by time
                 /// It helps to display newest Tweet first.
                 _commentList.sort((x, y) => DateTime.parse(y.createdAt)
@@ -265,11 +266,11 @@ class FeedState extends AppState {
   /// Fetch `Retweet` model from firebase realtime kDatabase.
   /// Retweet itself  is a type of `Tweet`
   Future<FeedModel?> fetchTweet(String postID) async {
-    FeedModel? _tweetDetail;
+    FeedModel? tweetDetail;
 
     /// If tweet is available in feedList then no need to fetch it from firebase
     if (feedList!.any((x) => x.key == postID)) {
-      _tweetDetail = feedList!.firstWhere((x) => x.key == postID);
+      tweetDetail = feedList!.firstWhere((x) => x.key == postID);
     }
 
     /// If tweet is not available in feedList then need to fetch it from firebase
@@ -280,19 +281,19 @@ class FeedState extends AppState {
           final snapshot = event.snapshot;
           if (snapshot.value != null) {
             var map = snapshot.value as Map<dynamic, dynamic>;
-            _tweetDetail = FeedModel.fromJson(map);
-            _tweetDetail!.key = snapshot.key!;
-            print(_tweetDetail!.description);
+            tweetDetail = FeedModel.fromJson(map);
+            tweetDetail!.key = snapshot.key!;
+            print(tweetDetail!.description);
           }
         },
       );
       if (model != null) {
-        _tweetDetail = model;
+        tweetDetail = model;
       } else {
         cprint("Fetched null value from  DB");
       }
     }
-    return _tweetDetail;
+    return tweetDetail;
   }
 
   /// create [New Tweet]

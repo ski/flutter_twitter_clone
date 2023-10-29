@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/helper/enum.dart';
-import 'package:flutter_twitter_clone/model/feedModel.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/state/feedState.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/customWidgets.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/customLoader.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/emptyList.dart';
-import 'package:flutter_twitter_clone/widgets/tweet/tweet.dart';
-import 'package:flutter_twitter_clone/widgets/tweet/widgets/tweetBottomSheet.dart';
+import 'package:moimoi/helper/enum.dart';
+import 'package:moimoi/model/feedModel.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/state/feedState.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/customWidgets.dart';
+import 'package:moimoi/widgets/newWidget/customLoader.dart';
+import 'package:moimoi/widgets/newWidget/emptyList.dart';
+import 'package:moimoi/widgets/tweet/tweet.dart';
+import 'package:moimoi/widgets/tweet/widgets/tweetBottomSheet.dart';
 import 'package:provider/provider.dart';
 
 class FeedPage extends StatelessWidget {
@@ -136,7 +136,7 @@ class _FeedPageBody extends StatelessWidget {
             );
           },
         ),
-        title: Image.asset('assets/images/icon-480.png', height: 40),
+        title: Image.asset('images/icon-480.png', height: 40),
         centerTitle: true,
         iconTheme: IconThemeData(color: Theme.of(context).primaryColor),
         backgroundColor: Theme.of(context).appBarTheme.backgroundColor,

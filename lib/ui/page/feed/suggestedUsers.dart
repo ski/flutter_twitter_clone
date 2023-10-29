@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/state/suggestionUserState.dart';
-import 'package:flutter_twitter_clone/state/searchState.dart';
-import 'package:flutter_twitter_clone/ui/page/common/widget/userListWidget.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/customFlatButton.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/customLoader.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/emptyList.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/title_text.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/state/suggestionUserState.dart';
+import 'package:moimoi/state/searchState.dart';
+import 'package:moimoi/ui/page/common/widget/userListWidget.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/customFlatButton.dart';
+import 'package:moimoi/widgets/newWidget/customLoader.dart';
+import 'package:moimoi/widgets/newWidget/emptyList.dart';
+import 'package:moimoi/widgets/newWidget/title_text.dart';
 import 'package:provider/provider.dart';
 
 class SuggestedUsers extends StatefulWidget {
@@ -105,8 +105,7 @@ class _SuggestedUsersState extends State<SuggestedUsers> {
               : CustomScrollView(
                   slivers: [
                     SliverAppBar(
-                      title:
-                          Image.asset('assets/images/icon-480.png', height: 40),
+                      title: Image.asset('images/icon-480.png', height: 40),
                       backgroundColor:
                           Theme.of(context).appBarTheme.backgroundColor,
                       centerTitle: true,

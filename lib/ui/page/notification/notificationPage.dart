@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/helper/enum.dart';
-import 'package:flutter_twitter_clone/model/feedModel.dart';
-import 'package:flutter_twitter_clone/model/notificationModel.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/state/notificationState.dart';
-import 'package:flutter_twitter_clone/ui/page/notification/widget/follow_notification_tile.dart';
-import 'package:flutter_twitter_clone/ui/page/notification/widget/post_like_tile.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/customAppBar.dart';
-import 'package:flutter_twitter_clone/widgets/customWidgets.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/emptyList.dart';
+import 'package:moimoi/helper/enum.dart';
+import 'package:moimoi/model/feedModel.dart';
+import 'package:moimoi/model/notificationModel.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/state/notificationState.dart';
+import 'package:moimoi/ui/page/notification/widget/follow_notification_tile.dart';
+import 'package:moimoi/ui/page/notification/widget/post_like_tile.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/customAppBar.dart';
+import 'package:moimoi/widgets/customWidgets.dart';
+import 'package:moimoi/widgets/newWidget/emptyList.dart';
 import 'package:provider/provider.dart';
 
 class NotificationPage extends StatefulWidget {

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/helper/constant.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/ui/page/bookmark/bookmarkPage.dart';
-import 'package:flutter_twitter_clone/ui/page/profile/follow/followerListPage.dart';
-import 'package:flutter_twitter_clone/ui/page/profile/follow/followingListPage.dart';
-import 'package:flutter_twitter_clone/ui/page/profile/profilePage.dart';
-import 'package:flutter_twitter_clone/ui/page/profile/qrCode/scanner.dart';
-import 'package:flutter_twitter_clone/ui/page/profile/widgets/circular_image.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/customWidgets.dart';
-import 'package:flutter_twitter_clone/widgets/url_text/customUrlText.dart';
+import 'package:moimoi/helper/constant.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/ui/page/bookmark/bookmarkPage.dart';
+import 'package:moimoi/ui/page/profile/follow/followerListPage.dart';
+import 'package:moimoi/ui/page/profile/follow/followingListPage.dart';
+import 'package:moimoi/ui/page/profile/profilePage.dart';
+import 'package:moimoi/ui/page/profile/qrCode/scanner.dart';
+import 'package:moimoi/ui/page/profile/widgets/circular_image.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/customWidgets.dart';
+import 'package:moimoi/widgets/url_text/customUrlText.dart';
 import 'package:provider/provider.dart';
 
 class SidebarMenu extends StatefulWidget {

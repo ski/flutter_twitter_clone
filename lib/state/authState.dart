@@ -8,11 +8,11 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_twitter_clone/helper/enum.dart';
-import 'package:flutter_twitter_clone/helper/shared_prefrence_helper.dart';
-import 'package:flutter_twitter_clone/helper/utility.dart';
-import 'package:flutter_twitter_clone/model/user.dart';
-import 'package:flutter_twitter_clone/ui/page/common/locator.dart';
+import 'package:moimoi/helper/enum.dart';
+import 'package:moimoi/helper/shared_prefrence_helper.dart';
+import 'package:moimoi/helper/utility.dart';
+import 'package:moimoi/model/user.dart';
+import 'package:moimoi/ui/page/common/locator.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:path/path.dart' as path;
 
@@ -110,6 +110,7 @@ class AuthState extends AppState {
     try {
       /// Record log in firebase kAnalytics about Google login
       kAnalytics.logLogin(loginMethod: 'google_login');
+      _googleSignIn.signInSilently();
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
       if (googleUser == null) {
         throw Exception('Google login cancelled by user');

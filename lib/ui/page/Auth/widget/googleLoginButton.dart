@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:flutter_twitter_clone/helper/utility.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/customLoader.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/rippleButton.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/title_text.dart';
+import 'package:moimoi/helper/utility.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/widgets/newWidget/customLoader.dart';
+import 'package:moimoi/widgets/newWidget/rippleButton.dart';
+import 'package:moimoi/widgets/newWidget/title_text.dart';
 
 class GoogleLoginButton extends StatelessWidget {
   const GoogleLoginButton({
@@ -54,7 +54,7 @@ class GoogleLoginButton extends StatelessWidget {
         child: Wrap(
           children: <Widget>[
             Image.asset(
-              'assets/images/google_logo.png',
+              'images/google_logo.png',
               height: 20,
               width: 20,
             ),

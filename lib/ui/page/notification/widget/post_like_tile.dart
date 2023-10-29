@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/model/feedModel.dart';
-import 'package:flutter_twitter_clone/model/user.dart';
-import 'package:flutter_twitter_clone/state/feedState.dart';
-import 'package:flutter_twitter_clone/state/notificationState.dart';
-import 'package:flutter_twitter_clone/ui/page/feed/feedPostDetail.dart';
-import 'package:flutter_twitter_clone/ui/page/profile/profilePage.dart';
-import 'package:flutter_twitter_clone/ui/page/profile/widgets/circular_image.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/customWidgets.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/title_text.dart';
-import 'package:flutter_twitter_clone/widgets/url_text/customUrlText.dart';
+import 'package:moimoi/model/feedModel.dart';
+import 'package:moimoi/model/user.dart';
+import 'package:moimoi/state/feedState.dart';
+import 'package:moimoi/state/notificationState.dart';
+import 'package:moimoi/ui/page/feed/feedPostDetail.dart';
+import 'package:moimoi/ui/page/profile/profilePage.dart';
+import 'package:moimoi/ui/page/profile/widgets/circular_image.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/customWidgets.dart';
+import 'package:moimoi/widgets/newWidget/title_text.dart';
+import 'package:moimoi/widgets/url_text/customUrlText.dart';
 import 'package:provider/provider.dart';
 
 class PostLikeTile extends StatelessWidget {

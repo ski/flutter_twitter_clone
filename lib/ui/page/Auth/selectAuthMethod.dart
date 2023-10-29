@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/helper/enum.dart';
-import 'package:flutter_twitter_clone/ui/page/Auth/signup.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/customFlatButton.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/title_text.dart';
+import 'package:moimoi/helper/enum.dart';
+import 'package:moimoi/ui/page/Auth/signup.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/customFlatButton.dart';
+import 'package:moimoi/widgets/newWidget/title_text.dart';
 import 'package:provider/provider.dart';
 import '../homePage.dart';
 import 'signin.dart';
@@ -49,7 +49,7 @@ class _WelcomePageState extends State<WelcomePage> {
             SizedBox(
               width: MediaQuery.of(context).size.width - 80,
               height: 40,
-              child: Image.asset('assets/images/icon-480.png'),
+              child: Image.asset('images/icon-480.png'),
             ),
             const Spacer(),
             const TitleText(

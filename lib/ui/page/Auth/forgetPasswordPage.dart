@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/helper/utility.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/customFlatButton.dart';
-import 'package:flutter_twitter_clone/widgets/customWidgets.dart';
+import 'package:moimoi/helper/utility.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/customFlatButton.dart';
+import 'package:moimoi/widgets/customWidgets.dart';
 import 'package:provider/provider.dart';
 
 class ForgetPasswordPage extends StatefulWidget {

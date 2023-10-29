@@ -1,17 +1,15 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:firebase_remote_config/firebase_remote_config.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/helper/enum.dart';
-import 'package:flutter_twitter_clone/helper/utility.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/ui/page/Auth/selectAuthMethod.dart';
-import 'package:flutter_twitter_clone/ui/page/common/updateApp.dart';
-import 'package:flutter_twitter_clone/ui/page/homePage.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
+import 'package:moimoi/helper/enum.dart';
+import 'package:moimoi/helper/utility.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/ui/page/Auth/selectAuthMethod.dart';
+import 'package:moimoi/ui/page/common/updateApp.dart';
+import 'package:moimoi/ui/page/homePage.dart';
+import 'package:moimoi/ui/theme/theme.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 
@@ -126,15 +124,11 @@ class _SplashPageState extends State<SplashPage> {
           child: Stack(
             alignment: Alignment.center,
             children: <Widget>[
-              Platform.isIOS
-                  ? const CupertinoActivityIndicator(
-                      radius: 35,
-                    )
-                  : const CircularProgressIndicator(
-                      strokeWidth: 2,
-                    ),
+              const CircularProgressIndicator(
+                strokeWidth: 2,
+              ),
               Image.asset(
-                'assets/images/icon-480.png',
+                'images/icon-480.png',
                 height: 30,
                 width: 30,
               )

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/model/user.dart';
-import 'package:flutter_twitter_clone/ui/page/profile/profilePage.dart';
-import 'package:flutter_twitter_clone/ui/page/profile/widgets/circular_image.dart';
-import 'package:flutter_twitter_clone/ui/page/settings/widgets/headerWidget.dart';
-import 'package:flutter_twitter_clone/ui/page/settings/widgets/settingsRowWidget.dart';
-import 'package:flutter_twitter_clone/state/chats/chatState.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/customAppBar.dart';
-import 'package:flutter_twitter_clone/widgets/customWidgets.dart';
-import 'package:flutter_twitter_clone/widgets/url_text/customUrlText.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/rippleButton.dart';
+import 'package:moimoi/model/user.dart';
+import 'package:moimoi/ui/page/profile/profilePage.dart';
+import 'package:moimoi/ui/page/profile/widgets/circular_image.dart';
+import 'package:moimoi/ui/page/settings/widgets/headerWidget.dart';
+import 'package:moimoi/ui/page/settings/widgets/settingsRowWidget.dart';
+import 'package:moimoi/state/chats/chatState.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/customAppBar.dart';
+import 'package:moimoi/widgets/customWidgets.dart';
+import 'package:moimoi/widgets/url_text/customUrlText.dart';
+import 'package:moimoi/widgets/newWidget/rippleButton.dart';
 import 'package:provider/provider.dart';
 
 class ConversationInformation extends StatelessWidget {

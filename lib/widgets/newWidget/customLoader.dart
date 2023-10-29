@@ -1,5 +1,4 @@
-import 'dart:io';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CustomLoader {
@@ -41,7 +40,9 @@ class CustomLoader {
       _overlayEntry?.remove();
       _overlayEntry = null;
     } catch (e) {
-      print("Exception:: $e");
+      if (kDebugMode) {
+        print("Exception:: $e");
+      }
     }
   }
 
@@ -83,15 +84,11 @@ class CustomScreenLoader extends StatelessWidget {
           child: Stack(
             alignment: Alignment.center,
             children: <Widget>[
-              Platform.isIOS
-                  ? const CupertinoActivityIndicator(
-                      radius: 35,
-                    )
-                  : const CircularProgressIndicator(
-                      strokeWidth: 2,
-                    ),
+              const CircularProgressIndicator(
+                strokeWidth: 2,
+              ),
               Image.asset(
-                'assets/images/icon-480.png',
+                'images/icon-480.png',
                 height: 30,
                 width: 30,
               )

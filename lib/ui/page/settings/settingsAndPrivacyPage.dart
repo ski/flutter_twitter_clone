@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/model/user.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/ui/page/settings/widgets/headerWidget.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/customAppBar.dart';
-import 'package:flutter_twitter_clone/widgets/customWidgets.dart';
+import 'package:moimoi/model/user.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/ui/page/settings/widgets/headerWidget.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/customAppBar.dart';
+import 'package:moimoi/widgets/customWidgets.dart';
 import 'package:provider/provider.dart';
 
 import 'widgets/settingsRowWidget.dart';

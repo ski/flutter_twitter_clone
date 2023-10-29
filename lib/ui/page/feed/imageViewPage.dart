@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/helper/constant.dart';
-import 'package:flutter_twitter_clone/helper/utility.dart';
-import 'package:flutter_twitter_clone/model/feedModel.dart';
-import 'package:flutter_twitter_clone/model/user.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/state/feedState.dart';
-import 'package:flutter_twitter_clone/widgets/cache_image.dart';
-import 'package:flutter_twitter_clone/widgets/tweet/widgets/tweetIconsRow.dart';
+import 'package:moimoi/helper/constant.dart';
+import 'package:moimoi/helper/utility.dart';
+import 'package:moimoi/model/feedModel.dart';
+import 'package:moimoi/model/user.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/state/feedState.dart';
+import 'package:moimoi/widgets/cache_image.dart';
+import 'package:moimoi/widgets/tweet/widgets/tweetIconsRow.dart';
 import 'package:provider/provider.dart';
 
 class ImageViewPge extends StatefulWidget {

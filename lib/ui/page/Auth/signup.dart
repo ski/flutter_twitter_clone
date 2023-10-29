@@ -1,16 +1,17 @@
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_twitter_clone/helper/constant.dart';
-import 'package:flutter_twitter_clone/helper/enum.dart';
-import 'package:flutter_twitter_clone/helper/utility.dart';
-import 'package:flutter_twitter_clone/model/user.dart';
-import 'package:flutter_twitter_clone/state/authState.dart';
-import 'package:flutter_twitter_clone/ui/page/Auth/widget/googleLoginButton.dart';
-import 'package:flutter_twitter_clone/ui/theme/theme.dart';
-import 'package:flutter_twitter_clone/widgets/customFlatButton.dart';
-import 'package:flutter_twitter_clone/widgets/customWidgets.dart';
-import 'package:flutter_twitter_clone/widgets/newWidget/customLoader.dart';
+import 'package:moimoi/helper/constant.dart';
+import 'package:moimoi/helper/enum.dart';
+import 'package:moimoi/helper/utility.dart';
+import 'package:moimoi/model/user.dart';
+import 'package:moimoi/state/authState.dart';
+import 'package:moimoi/ui/page/Auth/widget/googleLoginButton.dart';
+import 'package:moimoi/ui/theme/theme.dart';
+import 'package:moimoi/widgets/customFlatButton.dart';
+import 'package:moimoi/widgets/customWidgets.dart';
+import 'package:moimoi/widgets/newWidget/customLoader.dart';
 import 'package:provider/provider.dart';
 
 class Signup extends StatefulWidget {
@@ -164,7 +165,9 @@ class _SignupState extends State<Signup> {
       context: context,
     )
         .then((status) {
-      print(status);
+      if (kDebugMode) {
+        print(status);
+      }
     }).whenComplete(
       () {
         loader.hideLoader();
