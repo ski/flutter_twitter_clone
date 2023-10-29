@@ -45,7 +45,7 @@ class Utility {
     }
     var dt = DateTime.parse(date).toLocal();
     var dat =
-        DateFormat.jm().format(dt) + ' - ' + DateFormat("dd MMM yy").format(dt);
+        '${DateFormat.jm().format(dt)} - ${DateFormat("dd MMM yy").format(dt)}';
     return dat;
   }
 
@@ -110,21 +110,15 @@ class Utility {
     hr = dur.inHours - dur.inDays * 24;
     mm = dur.inMinutes - (dur.inHours * 60);
     if (dur.inDays > 0) {
-      msg = ' ' + dur.inDays.toString() + (dur.inDays > 1 ? ' Days ' : ' Day');
+      msg = ' ${dur.inDays}${dur.inDays > 1 ? ' Days ' : ' Day'}';
     }
     if (hr > 0) {
-      msg += ' ' + hr.toString() + ' hour';
+      msg += ' $hr hour';
     }
     if (mm > 0) {
-      msg += ' ' + mm.toString() + ' min';
+      msg += ' $mm min';
     }
-    return (dur.inDays).toString() +
-        ' Days ' +
-        ' ' +
-        hr.toString() +
-        ' Hours ' +
-        mm.toString() +
-        ' min';
+    return '${dur.inDays} Days  $hr Hours $mm min';
   }
 
   static String? getSocialLinks(String? url) {
@@ -133,8 +127,8 @@ class Utility {
           ? url
           : url.contains("www") &&
                   (!url.contains('https') && !url.contains('http'))
-              ? 'https://' + url
-              : 'https://www.' + url;
+              ? 'https://$url'
+              : 'https://www.$url';
     } else {
       return null;
     }
@@ -175,9 +169,9 @@ class Utility {
   static List<String> getHashTags(String text) {
     RegExp reg = RegExp(
         r"([#])\w+|(https?|ftp|file|#)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]*");
-    Iterable<Match> _matches = reg.allMatches(text);
+    Iterable<Match> matches = reg.allMatches(text);
     List<String> resultMatches = <String>[];
-    for (Match match in _matches) {
+    for (Match match in matches) {
       if (match.group(0)!.isNotEmpty) {
         var tag = match.group(0);
         resultMatches.add(tag!);
@@ -251,7 +245,7 @@ class Utility {
     final DynamicLinkParameters parameters = DynamicLinkParameters(
       uriPrefix: 'https://fwitter.page.link',
       link: Uri.parse('https://twitter.com/$id'),
-      androidParameters: AndroidParameters(
+      androidParameters: const AndroidParameters(
         packageName: 'com.thealphamerc.moimoi_dev',
         minimumVersion: 0,
       ),
